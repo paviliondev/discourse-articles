@@ -1,0 +1,10 @@
+en:
+  js:
+    filters:
+      articles:
+        title: 'articles'
+    topics:
+      bottom:
+        articles: "There are no more articles"
+    articles_settings:
+      category_setting: "Allow adding articles to the topics of this category"

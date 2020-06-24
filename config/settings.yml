@@ -1,0 +1,4 @@
+plugins:
+  articles_enabled:
+    default: true
+    client: true
