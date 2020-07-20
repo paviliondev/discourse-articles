@@ -11,6 +11,7 @@ Discourse.filters.push(:articles)
 Discourse.anonymous_filters.push(:articles)
 
 after_initialize do
+  ::ActionController::Base.prepend_view_path File.expand_path("../app/views", __FILE__)
 
   Discourse::Application.routes.append do
     get '/:slug', to: redirect('/t/%{slug}')
