@@ -34,10 +34,10 @@
   <%= server_plugin_outlet "topic_header" %>
 
   <%- if include_crawler_content? %>
-
+  <% isArticle = @topic_view.topic.category.custom_fields['articles_enabled'] == 'true' %>
   <% @topic_view.posts.each_with_index do |post, idx| %>
     <% if (u = post.user) %>
-    <% schema = @topic_view.topic.category.custom_fields['articles_enabled'] == 'true' && (@topic_view.topic.posts_count < 2) ? 'Article' : 'DiscussionForumPosting'%>
+    <% schema = ( isArticle && idx < 1 ) ? 'Article' : 'DiscussionForumPosting'%>
       <div itemscope itemtype='http://schema.org/<%=schema%>' class='topic-body crawler-post'>
         <div class='crawler-post-meta'>
           <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
