@@ -37,7 +37,7 @@
 
   <% @topic_view.posts.each_with_index do |post, idx| %>
     <% if (u = post.user) %>
-    <% schema = @topic_view.topic.category.custom_fields['articles_enabled'] == 'true' ? 'Article' : 'DiscussionForumPosting'%>
+    <% schema = @topic_view.topic.category.custom_fields['articles_enabled'] == 'true' && (@topic_view.topic.posts_count < 2) ? 'Article' : 'DiscussionForumPosting'%>
       <div itemscope itemtype='http://schema.org/<%=schema%>' class='topic-body crawler-post'>
         <div class='crawler-post-meta'>
           <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">

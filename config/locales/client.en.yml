@@ -3,6 +3,7 @@ en:
     filters:
       articles:
         title: 'articles'
+        help: 'Blog entries'
     topics:
       bottom:
         articles: "There are no more articles"
