@@ -2,3 +2,9 @@ plugins:
   articles_enabled:
     default: true
     client: true
+  articles_enable_nav_item:
+    default: false
+    client: true
+  articles_nav_item_link:
+    default: "/"
+    client: true

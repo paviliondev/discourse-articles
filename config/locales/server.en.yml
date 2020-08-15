@@ -1,3 +1,5 @@
 en:
   site_settings:
     articles_enabled: "Enable the articles plugin"
+    articles_enable_nav_item: "Enable the Articles nav item"
+    articles_nav_item_link: "The link to where the user lands after clicking the nav item"
