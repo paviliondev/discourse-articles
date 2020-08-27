@@ -34,7 +34,7 @@
   <%= server_plugin_outlet "topic_header" %>
 
   <%- if include_crawler_content? %>
-  <% isArticle = @topic_view.topic.category.custom_fields['articles_enabled'] == 'true' %>
+  <% isArticle = @topic_view.topic.category && (@topic_view.topic.category.custom_fields['articles_enabled'] == 'true') %>
   <% @topic_view.posts.each_with_index do |post, idx| %>
     <% if (u = post.user) %>
     <% schema = ( isArticle && idx < 1 ) ? 'Article' : 'DiscussionForumPosting'%>
